@@ -7,7 +7,6 @@ export default class JSAlertsPageObjects extends RootObject{
     }
     
     open(): void {
-        //there should be just allure without import ??
         AllureReporter.addStep('Navigating to JS alerts page')
         super.open('javascript_alerts')
       }

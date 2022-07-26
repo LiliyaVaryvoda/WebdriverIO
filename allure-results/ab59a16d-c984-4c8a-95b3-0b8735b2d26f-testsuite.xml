@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658831171793' stop='1658831178692'>
+    <name>Inputs test suit</name>
+    <title>Inputs test suit</title>
+    <test-cases>
+        <test-case start='1658831171794' status='passed' stop='1658831178690'>
+            <name>Inputs test case #1</name>
+            <title>Inputs test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-7'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-7'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+            </parameters>
+            <steps>
+                <step start='1658831171795' status='passed' stop='1658831171795'>
+                    <name>Navigating to Inputs page</name>
+                    <title>Navigating to Inputs page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1658831171805' status='passed' stop='1658831178581'>
+                    <name>Checking inputs test</name>
+                    <title>Checking inputs test</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1658831171805' status='passed' stop='1658831171805'>
+                            <name>Setting input value in field</name>
+                            <title>Setting input value in field</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1658831178569' status='passed' stop='1658831178569'>
+                            <name>Checking if field is focused after entering input value</name>
+                            <title>Checking if field is focused after entering input value</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='997dcdc6-83b5-4120-af6c-250e7373b1ce-attachment.png' type='image/png' size='34113'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

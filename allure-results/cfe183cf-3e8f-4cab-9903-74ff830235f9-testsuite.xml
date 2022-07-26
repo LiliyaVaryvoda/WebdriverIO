@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658819863291' stop='1658819874480'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658831080261' stop='1658831091445'>
     <name>Context menu test suit</name>
     <title>Context menu test suit</title>
     <test-cases>
-        <test-case start='1658819863291' status='passed' stop='1658819874479'>
+        <test-case start='1658831080261' status='passed' stop='1658831091445'>
             <name>Context menu test case #1</name>
             <title>Context menu test case #1</title>
             <labels>
@@ -19,18 +19,18 @@
                 <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
             </parameters>
             <steps>
-                <step start='1658819863292' status='passed' stop='1658819863293'>
+                <step start='1658831080262' status='passed' stop='1658831080262'>
                     <name>Navigating to context menu page</name>
                     <title>Navigating to context menu page</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1658819863301' status='passed' stop='1658819874360'>
+                <step start='1658831080268' status='passed' stop='1658831091320'>
                     <name>Checking context menu test</name>
                     <title>Checking context menu test</title>
                     <attachments/>
                     <steps>
-                        <step start='1658819868307' status='passed' stop='1658819868307'>
+                        <step start='1658831085280' status='passed' stop='1658831085280'>
                             <name>Clicking right on context menu</name>
                             <title>Clicking right on context menu</title>
                             <attachments/>
@@ -40,7 +40,7 @@
                 </step>
             </steps>
             <attachments>
-                <attachment title='Screenshot' source='5b690fe6-8e2f-4fc9-972b-f632f52f6c62-attachment.png' type='image/png' size='54399'/>
+                <attachment title='Screenshot' source='dc938c6b-15ed-456c-b223-2d6a4b3cae23-attachment.png' type='image/png' size='54399'/>
             </attachments>
         </test-case>
     </test-cases>

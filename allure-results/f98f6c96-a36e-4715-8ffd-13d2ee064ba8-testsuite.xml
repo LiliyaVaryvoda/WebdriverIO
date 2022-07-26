@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658819876481' stop='1658819891659'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658831093212' stop='1658831108391'>
     <name>DropDown Test suit</name>
     <title>DropDown Test suit</title>
     <test-cases>
-        <test-case start='1658819876481' status='passed' stop='1658819891659'>
+        <test-case start='1658831093212' status='passed' stop='1658831108391'>
             <name>Dropdown test case #1</name>
             <title>Dropdown test case #1</title>
             <labels>
@@ -19,24 +19,24 @@
                 <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
             </parameters>
             <steps>
-                <step start='1658819876482' status='passed' stop='1658819876482'>
+                <step start='1658831093213' status='passed' stop='1658831093213'>
                     <name>Navigating to dropdown page</name>
                     <title>Navigating to dropdown page</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1658819876487' status='passed' stop='1658819891548'>
+                <step start='1658831093218' status='passed' stop='1658831108275'>
                     <name>Checking dropdown test</name>
                     <title>Checking dropdown test</title>
                     <attachments/>
                     <steps>
-                        <step start='1658819881494' status='passed' stop='1658819881494'>
+                        <step start='1658831098231' status='passed' stop='1658831098231'>
                             <name>Selecting dropdown</name>
                             <title>Selecting dropdown</title>
                             <attachments/>
                             <steps/>
                         </step>
-                        <step start='1658819886521' status='passed' stop='1658819886521'>
+                        <step start='1658831103251' status='passed' stop='1658831103251'>
                             <name>Selecting dropdown</name>
                             <title>Selecting dropdown</title>
                             <attachments/>
@@ -46,7 +46,7 @@
                 </step>
             </steps>
             <attachments>
-                <attachment title='Screenshot' source='5ce4e985-c538-4d6f-b762-9a807ace2b45-attachment.png' type='image/png' size='35549'/>
+                <attachment title='Screenshot' source='f0d4b0ad-1980-4f06-b1ff-4b1becc617e7-attachment.png' type='image/png' size='35549'/>
             </attachments>
         </test-case>
     </test-cases>
