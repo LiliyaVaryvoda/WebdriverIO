@@ -1,5 +1,6 @@
 import RootObject from "./rootObject";
 import {expect} from 'chai'
+import AllureReporter from "@wdio/allure-reporter";
 
 export default class DropDownPageObjects extends RootObject{
     constructor(){
@@ -7,10 +8,17 @@ export default class DropDownPageObjects extends RootObject{
     }
 
     open(): void {
+        AllureReporter.addStep('Navigating to dropdown page')
         super.open('dropdown')
       }
 
-    get dropDownElement(){
-        return $("#dropdown")
+    async dropDownElement(): Promise<WebdriverIO.Element> {
+        return await $('#dropdown')
+    }
+
+    async selectDropDown(text): Promise<void> {
+        AllureReporter.addStep("Selecting dropdown")
+        const element = await this.dropDownElement();
+        element.selectByVisibleText(text)
     }
 }

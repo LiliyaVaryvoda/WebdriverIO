@@ -1,3 +1,4 @@
+import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
 import {expect} from 'chai'
 
@@ -7,6 +8,7 @@ export default class LoginPageObjects extends RootObject{
     }
 
     open(): void {
+        AllureReporter.addStep('Navigating to Form Authentication : Login Page')
         super.open('login')
       }
 
@@ -22,6 +24,10 @@ export default class LoginPageObjects extends RootObject{
         return $(".radius")
     }
 
+    get logoutBtn(){
+        return $(".button.secondary.radius")
+    }
+
     async enterCorrectLogin(a,b) {
         await this.usernameField.setValue(a)
         await this.passwordField.setValue(b)
@@ -29,5 +35,9 @@ export default class LoginPageObjects extends RootObject{
 
     async clickLogin(){
         await this.loginBtn.click()
+    }
+
+    async clickLogOut(){
+        await this.logoutBtn.click()
     }
 }

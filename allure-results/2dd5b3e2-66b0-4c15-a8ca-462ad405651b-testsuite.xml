@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658819876481' stop='1658819891659'>
+    <name>DropDown Test suit</name>
+    <title>DropDown Test suit</title>
+    <test-cases>
+        <test-case start='1658819876481' status='passed' stop='1658819891659'>
+            <name>Dropdown test case #1</name>
+            <title>Dropdown test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+            </parameters>
+            <steps>
+                <step start='1658819876482' status='passed' stop='1658819876482'>
+                    <name>Navigating to dropdown page</name>
+                    <title>Navigating to dropdown page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1658819876487' status='passed' stop='1658819891548'>
+                    <name>Checking dropdown test</name>
+                    <title>Checking dropdown test</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1658819881494' status='passed' stop='1658819881494'>
+                            <name>Selecting dropdown</name>
+                            <title>Selecting dropdown</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1658819886521' status='passed' stop='1658819886521'>
+                            <name>Selecting dropdown</name>
+                            <title>Selecting dropdown</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='5ce4e985-c538-4d6f-b762-9a807ace2b45-attachment.png' type='image/png' size='35549'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658820033377' stop='1658820043545'>
+    <name>Notification Messages test suit</name>
+    <title>Notification Messages test suit</title>
+    <test-cases>
+        <test-case start='1658820033377' status='passed' stop='1658820043545'>
+            <name>Multiple windows test case #1</name>
+            <title>Multiple windows test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-10'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-10'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+            </parameters>
+            <steps>
+                <step start='1658820033378' status='passed' stop='1658820033378'>
+                    <name>Navigating to Notification messages page</name>
+                    <title>Navigating to Notification messages page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1658820033383' status='passed' stop='1658820043457'>
+                    <name>Checking notification messages test</name>
+                    <title>Checking notification messages test</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1658820038397' status='passed' stop='1658820038397'>
+                            <name>Clicking link button</name>
+                            <title>Clicking link button</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='3a0d1ed7-86be-49dc-823c-11fe49697ce6-attachment.png' type='image/png' size='68148'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

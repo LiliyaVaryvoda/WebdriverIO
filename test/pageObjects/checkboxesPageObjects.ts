@@ -1,5 +1,6 @@
 import RootObject from "./rootObject";
 import {expect} from 'chai'
+import { isThisTypeNode } from "typescript";
 
 export default class CheckboxesPageObjects extends RootObject{
     constructor(){
@@ -9,6 +10,14 @@ export default class CheckboxesPageObjects extends RootObject{
     open(): void {
         super.open('/checkboxes')
       }
+
+    async checkboxes(): Promise<WebdriverIO.Element> {
+        return await $('#checkboxes input[type="checkbox"]')
+    }
+
+    // async checkbox1(): Promise<WebdriverIO.Element> {
+    //     return await this.checkboxes.get(0);
+    // }
 
 
     async getCheckbox1(): Promise<WebdriverIO.Element> {
@@ -36,5 +45,8 @@ export default class CheckboxesPageObjects extends RootObject{
     async verifyElementIsDisplayed(element: WebdriverIO.Element): Promise<void> {
     expect(await element.isDisplayed()).to.be.true;
   }
+
+
+
   
 }

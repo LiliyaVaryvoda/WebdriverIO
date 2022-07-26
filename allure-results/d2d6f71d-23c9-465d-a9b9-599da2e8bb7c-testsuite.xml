@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1658820004933' stop='1658820030230'>
+    <name>Multiple windows test suit</name>
+    <title>Multiple windows test suit</title>
+    <test-cases>
+        <test-case start='1658820004933' status='passed' stop='1658820030229'>
+            <name>Multiple windows test case #1</name>
+            <title>Multiple windows test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.114'/>
+            </parameters>
+            <steps>
+                <step start='1658820004934' status='passed' stop='1658820004934'>
+                    <name>Navigating to Multiple Windows page</name>
+                    <title>Navigating to Multiple Windows page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1658820004940' status='passed' stop='1658820030143'>
+                    <name>Checking multiple windows test</name>
+                    <title>Checking multiple windows test</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1658820009954' status='passed' stop='1658820009954'>
+                            <name>Clicking link button</name>
+                            <title>Clicking link button</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='64e88daa-2d43-4080-80c3-41574f15fdb6-attachment.png' type='image/png' size='8865'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

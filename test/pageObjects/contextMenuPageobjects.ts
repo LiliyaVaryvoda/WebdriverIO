@@ -1,6 +1,6 @@
 import RootObject from "./rootObject";
 import {expect} from 'chai'
-
+import AllureReporter from "@wdio/allure-reporter";
 
 
 export default class ContextMenu extends RootObject{
@@ -9,16 +9,18 @@ export default class ContextMenu extends RootObject{
     }
 
     open(): void {
+        AllureReporter.addStep('Navigating to context menu page')
         super.open('/context_menu')
       }
 
-
-    get contextMenuField(){
-        return $('#hot-spot')
+    async contextMenuField(): Promise<WebdriverIO.Element> {
+        return await $('#hot-spot');
     }
 
-
-    async rightClickOnContextMenu(){
-        this.contextMenuField.click({ button: 'right', skipRelease:true})
+    async rightClickOnContextMenu(): Promise<void> {
+        AllureReporter.addStep("Clicking right on context menu")
+        const right = await this.contextMenuField();
+        right.click({ button: 'right', skipRelease:true});
     }
+
 }

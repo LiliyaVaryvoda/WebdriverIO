@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-
+import allureReporter from '@wdio/allure-reporter'
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -161,7 +161,15 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    
+
+    // my note : was before - reporters :'spec'
+
+    reporters: ['spec', ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
 
     
@@ -224,8 +232,9 @@ export const config: Options.Testrunner = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        global.allure =  allureReporter
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -268,6 +277,16 @@ export const config: Options.Testrunner = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
+
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+        if (passed) {
+            await browser.takeScreenshot()
+          }
+        else if (error) {
+            let screen = await browser.takeScreenshot()
+            await allureReporter.addAttachment("Myscreenshot",Buffer.from(screen, "base64"), "image/png")
+        }
+    },
 
 
     /**
