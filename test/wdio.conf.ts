@@ -169,6 +169,7 @@ export const config: Options.Testrunner = {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
+        addConsoleLogs : true
     }]],
 
 
@@ -284,7 +285,7 @@ export const config: Options.Testrunner = {
           }
         else if (error) {
             let screen = await browser.takeScreenshot()
-            await allureReporter.addAttachment("Myscreenshot",Buffer.from(screen, "base64"), "image/png")
+            allureReporter.addAttachment("Myscreenshot",Buffer.from(screen, "base64"), "image/png")
         }
     },
 

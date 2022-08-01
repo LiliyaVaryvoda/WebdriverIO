@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659374638619' stop='1659374640650'>
+    <name>Context menu test suit</name>
+    <title>Context menu test suit</title>
+    <test-cases>
+        <test-case start='1659374638619' status='passed' stop='1659374640650'>
+            <name>Context menu test case #1</name>
+            <title>Context menu test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+            </parameters>
+            <steps>
+                <step start='1659374638620' status='passed' stop='1659374638620'>
+                    <name>Navigating to context menu page</name>
+                    <title>Navigating to context menu page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1659374638626' status='passed' stop='1659374640546'>
+                    <name>Checking context menu test</name>
+                    <title>Checking context menu test</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1659374638626' status='passed' stop='1659374638626'>
+                            <name>Clicking right on context menu</name>
+                            <title>Clicking right on context menu</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='51752790-fe95-4fed-823a-f377b26b5089-attachment.png' type='image/png' size='54399'/>
+                <attachment title='Console Logs' source='caa8afaa-0b2b-40cd-80f0-2cd751679ba8-attachment.html' type='text/html' size='329'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

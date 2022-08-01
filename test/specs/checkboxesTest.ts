@@ -1,28 +1,17 @@
-// import CheckboxesPageObjects from "../pageObjects/checkboxesPageObjects";
-// const checkboxesPageObjects = new CheckboxesPageObjects()
+import CheckboxesPageObjects from "../pageObjects/checkboxesPageObjects";
+const checkboxesPageObjects = new CheckboxesPageObjects()
+import AllureReporter from "@wdio/allure-reporter";
 
-// describe('Checkboxes Elements Test', function(){
+describe('Checkboxes test suit', function(){
 
-//     before(async function () {
-//         checkboxesPageObjects.open();
-//       });
+    before(async function () {
+        checkboxesPageObjects.open();
+      });
 
-//     it('Select checkboxes', async function(){
-//         await checkboxesPageObjects.checkboxes[1].isDisplayed()
-//         await browser.pause(5000)
-        // await checkboxesPageObjects.verifyElementIsDisplayed(await checkboxesPageObjects.getCheckbox1())
-        // await checkboxesPageObjects.clickOnCheckbox1();
-        // await browser.pause(1000);
-        // await checkboxesPageObjects.clickOnCheckbox1();
-        // await browser.pause(1000);
-        // await browser.pause(1000);
-        // await checkboxesPageObjects.verifyElementIsDisplayed(await checkboxesPageObjects.getCheckbox2())
-        // await checkboxesPageObjects.clickOnCheckbox2();
-        // await browser.pause(1000);
-        // await checkboxesPageObjects.clickOnCheckbox2();
-        // await browser.pause(1000);
-        // await browser.pause(1000);
-        // await checkboxesPageObjects.clickOnCheckbox2();
-        // await browser.pause(1000);
-//     })
-// })
+    it('Checkboxes test case #1', async function(){
+        AllureReporter.startStep("Checking checkboxes test")
+        await checkboxesPageObjects.clickOnCheckbox1();
+        await checkboxesPageObjects.clickOnCheckbox2();
+        AllureReporter.endStep("passed")
+    })
+})

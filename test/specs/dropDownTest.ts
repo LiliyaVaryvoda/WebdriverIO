@@ -10,12 +10,12 @@ describe('DropDown Test suit', function(){
       });
 
     it('Dropdown test case #1', async function(){
-        await AllureReporter.startStep("Checking dropdown test")
+        AllureReporter.startStep("Checking dropdown test")
         await browser.pause(5000)
-        await dropDownPageObjects.selectDropDown("Option 1")
+        await dropDownPageObjects.selectDropDown1()
         await browser.pause(5000)
-        await dropDownPageObjects.selectDropDown("Option 2")
+        await dropDownPageObjects.selectDropDown2()
         await browser.pause(5000)
-        await AllureReporter.endStep("passed")
+        AllureReporter.endStep("passed")
     })
 })

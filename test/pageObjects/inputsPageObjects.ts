@@ -15,7 +15,7 @@ export default class InputsPageObjects extends RootObject{
         return await $('input[type=number]');
     }
 
-    async setValueInField(somevalue): Promise<void> {
+    async setValueInField(somevalue:number): Promise<void> {
         AllureReporter.addStep("Setting input value in field")
         const field = await this.numberField();
         field.setValue(somevalue);
@@ -24,6 +24,6 @@ export default class InputsPageObjects extends RootObject{
     async checkIfFocused(): Promise<void> {
         AllureReporter.addStep("Checking if field is focused after entering input value")
         const field = await this.numberField();
-        field.isFocused()
+        expect(field.isFocused())
     }
 }

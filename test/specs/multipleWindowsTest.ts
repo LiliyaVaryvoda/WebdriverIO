@@ -10,16 +10,10 @@ describe('Multiple windows test suit', function(){
       });
 
     it('Multiple windows test case #1', async function(){
-        await AllureReporter.startStep("Checking multiple windows test")
-        await browser.pause(5000)
+        AllureReporter.startStep("Checking multiple windows test")
         await multipleWindows.clickLinkButton()
-        await browser.pause(5000)
-        await expect(await $('h3')).toBePresent()
-        await browser.pause(5000)
         await browser.switchWindow('https://the-internet.herokuapp.com/windows')
-        await browser.pause(5000)
         await browser.switchWindow('New Window')
-        await browser.pause(5000)
-        await AllureReporter.endStep("passed")
+        AllureReporter.endStep("passed")
     })
 })

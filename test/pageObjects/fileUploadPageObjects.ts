@@ -19,7 +19,7 @@ export default class FileUpload extends RootObject{
         return await $('#file-submit')
     }
 
-    async clickUploadButton(somepath): Promise<void> {
+    async clickUploadButton(somepath:string): Promise<void> {
         AllureReporter.addStep("Clicking upload button")
         const button = await this.uploadButton();
         button.setValue(somepath)
@@ -28,7 +28,7 @@ export default class FileUpload extends RootObject{
     async clickSubmitButton(): Promise<void> {
         AllureReporter.addStep("Clicking sumbit button")
         const button = await this.submitButton();
-        button.click()
+        await button.click()
     }
 
 }

@@ -10,11 +10,10 @@ describe('Inputs test suit', function(){
       });
 
     it('Inputs test case #1', async function(){
-        await AllureReporter.startStep("Checking inputs test")
+        AllureReporter.startStep("Checking inputs test")
         await inputsPageObjects.setValueInField(10)
-        await browser.pause(5000)
         await inputsPageObjects.checkIfFocused()
-        await AllureReporter.endStep("passed")
+        AllureReporter.endStep("passed")
     })
 
 })

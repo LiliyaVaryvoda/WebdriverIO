@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659374598705' stop='1659374600724'>
+    <name>Context menu test suit</name>
+    <title>Context menu test suit</title>
+    <test-cases>
+        <test-case start='1659374598706' status='broken' stop='1659374600724'>
+            <name>Context menu test case #1</name>
+            <title>Context menu test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+            </parameters>
+            <steps>
+                <step start='1659374598706' status='passed' stop='1659374598706'>
+                    <name>Navigating to context menu page</name>
+                    <title>Navigating to context menu page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1659374598711' status='broken' stop='1659374600724'>
+                    <name>Checking context menu test</name>
+                    <title>Checking context menu test</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='0b04f80c-9f99-4a4d-a016-ddd9b37b3a56-attachment.png' type='image/png' size='54399'/>
+                        <attachment title='Screenshot' source='23efb16b-b95e-4420-befd-a3634cc9745b-attachment.png' type='image/png' size='54399'/>
+                        <attachment title='Myscreenshot' source='37025d91-a3ea-488d-9e12-0d1b84d8249e-attachment.png' type='image/png' size='54399'/>
+                        <attachment title='Console Logs' source='1337ffd4-ece6-4070-82e0-b415d45e49c2-attachment.html' type='text/html' size='328'/>
+                    </attachments>
+                    <steps>
+                        <step start='1659374600605' status='passed' stop='1659374600606'>
+                            <name>Title</name>
+                            <title>Title</title>
+                            <attachments>
+                                <attachment title='Step screenshot' source='74bd68db-8401-4c66-815d-4d92b605aabd-attachment.png' type='image/png' size='54399'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>no such alert
+                  (Session info: chrome=103.0.5060.134)</message>
+                <stack-trace>no such alert: no such alert
+                  (Session info: chrome=103.0.5060.134)
+                    at getErrorFromResponseBody (C:\Users\Lilia_Varyvoda\Desktop\webdriverio\WebdriverIO\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\Lilia_Varyvoda\Desktop\webdriverio\WebdriverIO\node_modules\webdriver\build\request\index.js:166:60)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async Browser.wrapCommandFn (C:\Users\Lilia_Varyvoda\Desktop\webdriverio\WebdriverIO\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Context.&lt;anonymous> (C:\Users\Lilia_Varyvoda\Desktop\webdriverio\WebdriverIO\test\specs\contextMenuTest.ts:15:27)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

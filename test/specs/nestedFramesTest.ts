@@ -14,6 +14,10 @@
 //         await browser.pause(5000)
         
 //         //browser.switchToFrame(nestedFrames.leftFrame)
+//         //await expect(nestedFrames.leftFrame).toHaveText('LEFT')
+//         const leftframebody = await nestedFrames.topFrame.frameLocator('[name="frame-left"]')
+//         .locator('body')
+//       await expect(leftframebody).toHaveText('LEFT')
 //         await AllureReporter.endStep("passed")
 //     })
 // })

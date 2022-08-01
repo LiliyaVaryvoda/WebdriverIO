@@ -19,7 +19,9 @@ export default class MultipleWindows extends RootObject{
     async clickLinkButton(): Promise<void> {
         AllureReporter.addStep("Clicking link button")
         const button = await this.linkButton();
-        button.click({skipRelease:true});
+        await button.waitForDisplayed({ timeout: 3000 });
+        await button.click({skipRelease:true});
+        expect(await $('h3')).toBePresent()
     }
 
 }

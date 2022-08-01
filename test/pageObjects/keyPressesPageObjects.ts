@@ -23,7 +23,9 @@ export default class KeyPresses extends RootObject{
     async enterElement(): Promise<void> {
         AllureReporter.addStep("Enter element in field")
         const field = await this.fieldToEnter();
-        field.setValue('/')
+        await field.waitForDisplayed({ timeout: 3000 });
+        await field.setValue('/')
+        expect(this.result).toHaveTextContaining("SLASH")
     }
 
 }

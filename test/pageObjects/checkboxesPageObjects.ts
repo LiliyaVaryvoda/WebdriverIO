@@ -15,10 +15,6 @@ export default class CheckboxesPageObjects extends RootObject{
         return await $('#checkboxes input[type="checkbox"]')
     }
 
-    // async checkbox1(): Promise<WebdriverIO.Element> {
-    //     return await this.checkboxes.get(0);
-    // }
-
 
     async getCheckbox1(): Promise<WebdriverIO.Element> {
         return await $('#checkboxes > input[type=checkbox]:nth-child(1)');
@@ -27,7 +23,8 @@ export default class CheckboxesPageObjects extends RootObject{
 
     async clickOnCheckbox1(): Promise<void> {
         const button = await this.getCheckbox1();
-        button.click();
+        await button.waitForDisplayed({ timeout: 3000 });
+        await button.click()
     }
 
 
@@ -38,15 +35,8 @@ export default class CheckboxesPageObjects extends RootObject{
         
     async clickOnCheckbox2(): Promise<void> {
         const button = await this.getCheckbox2();
-        button.click();
+        await button.waitForDisplayed({ timeout: 3000 });
+        await button.click();
     }
-
-
-    async verifyElementIsDisplayed(element: WebdriverIO.Element): Promise<void> {
-    expect(await element.isDisplayed()).to.be.true;
-  }
-
-
-
   
 }

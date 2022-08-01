@@ -28,16 +28,19 @@ export default class LoginPageObjects extends RootObject{
         return $(".button.secondary.radius")
     }
 
-    async enterCorrectLogin(a,b) {
-        await this.usernameField.setValue(a)
-        await this.passwordField.setValue(b)
+    async enterCorrectLogin(name: string, password : string) {
+        AllureReporter.addStep("Entering correct login")
+        await this.usernameField.setValue(name)
+        await this.passwordField.setValue(password)
     }
 
     async clickLogin(){
+        AllureReporter.addStep("Click login button")
         await this.loginBtn.click()
     }
 
     async clickLogOut(){
+        AllureReporter.addStep("Click log out button")
         await this.logoutBtn.click()
     }
 }

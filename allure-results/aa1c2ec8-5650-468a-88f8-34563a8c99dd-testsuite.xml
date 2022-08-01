@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659374108698' stop='1659374111056'>
+    <name>Forgot Password test suit</name>
+    <title>Forgot Password test suit</title>
+    <test-cases>
+        <test-case start='1659374108699' status='passed' stop='1659374111056'>
+            <name>Forgot password test case #1</name>
+            <title>Forgot password test case #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.134'/>
+            </parameters>
+            <steps>
+                <step start='1659374108710' status='passed' stop='1659374110878'>
+                    <name>Checking forgot password test</name>
+                    <title>Checking forgot password test</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='bbadd703-befd-4f56-ab3e-4bceb80df789-attachment.png' type='image/png' size='41306'/>
+                    </attachments>
+                    <steps>
+                        <step start='1659374108710' status='passed' stop='1659374108710'>
+                            <name>Entering email in email field</name>
+                            <title>Entering email in email field</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1659374110821' status='passed' stop='1659374110823'>
+                            <name>Title</name>
+                            <title>Title</title>
+                            <attachments>
+                                <attachment title='Step screenshot' source='2dd390b0-1afc-4474-997a-6c64e9815544-attachment.png' type='image/png' size='41306'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='3273c8a9-3d4d-43c3-bf2e-26a99e836004-attachment.png' type='image/png' size='44594'/>
+                <attachment title='Console Logs' source='abac9bdb-485f-4459-b5e4-ecc0435373cc-attachment.html' type='text/html' size='329'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

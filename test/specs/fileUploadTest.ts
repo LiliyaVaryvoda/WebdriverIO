@@ -12,7 +12,7 @@ describe('File upload test suit', function(){
       });
 
     it('File upload test case #1', async function(){
-        await AllureReporter.startStep("Checking file upload test")
+        AllureReporter.startStep("Checking file upload test")
         const filePath = 'C:/Users/Lilia_Varyvoda/Desktop/epam.png'
         const remoteFilePath = await browser.uploadFile(filePath)
         await browser.pause(5000)
@@ -20,6 +20,6 @@ describe('File upload test suit', function(){
         await browser.pause(5000)
         await fileUpload.clickSubmitButton()
         await browser.pause(5000)
-        await AllureReporter.endStep("passed")
+        AllureReporter.endStep("passed")
     })
 })
