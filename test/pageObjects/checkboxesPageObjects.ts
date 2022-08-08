@@ -1,6 +1,6 @@
 import RootObject from "./rootObject";
 import {expect} from 'chai'
-import {step}  from '../helpers/logger';
+import {stepAllure}  from '../helpers/reporters';
 
 export default class CheckboxesPageObjects extends RootObject{
     constructor(){
@@ -23,8 +23,8 @@ export default class CheckboxesPageObjects extends RootObject{
 
 
         async clickOnCheckbox1(): Promise<void> {
-          await step(
-            false,
+          await stepAllure(
+            true,
             true,
             'Clicking on first checkbox',
             'The button should be clickable',
@@ -45,9 +45,9 @@ export default class CheckboxesPageObjects extends RootObject{
 
 
         async clickOnCheckbox2(): Promise<void> {
-          await step(
+          await stepAllure(
             true,
-            false,
+            true,
             'Clicking on second checkbox',
             'The button should be clickable',
             "2",

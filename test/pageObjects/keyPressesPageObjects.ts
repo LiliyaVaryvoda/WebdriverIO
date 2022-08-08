@@ -1,6 +1,6 @@
 import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
-import {step}  from '../helpers/logger';
+import {stepAllure}   from '../helpers/reporters';
 
 export default class KeyPresses extends RootObject{
     constructor(){
@@ -20,30 +20,20 @@ export default class KeyPresses extends RootObject{
         return await $('#result')
     }
 
-
     async enterElement(): Promise<void> {
-        AllureReporter.addStep("Enter element in field")
-        const field = await this.fieldToEnter();
-        await field.waitForDisplayed({ timeout: 3000 });
-        await field.setValue('/')
-        expect(this.result).toHaveTextContaining("SLASH")
-    }
-
-
-    // async enterElement(): Promise<void> {
-    //     await step(
-    //       true,
-    //       true,
-    //       'Entering element',
-    //       'The element should be entered',
-    //       "1",
-    //       async () => {
-    //     const field = await this.fieldToEnter();
-    //     await field.waitForDisplayed({ timeout: 3000 });
-    //     await field.setValue('/')
-    //     expect(this.result).toHaveTextContaining("!!!!!!")
-    //       },
-    //     );
-    //   }
+        await stepAllure(
+        true,
+        true,
+        "Checking entering the element in the field",
+        "The element should be entered",
+        "1",
+        async () => {
+            const field = await this.fieldToEnter();
+            await field.waitForDisplayed({ timeout: 3000 });
+            await field.setValue('/')
+            expect(this.result).toHaveTextContaining("SLASH")
+        }
+      )
+      };
 
 }

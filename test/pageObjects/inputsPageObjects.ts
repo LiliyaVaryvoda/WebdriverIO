@@ -1,5 +1,6 @@
 import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
+import {stepAllure}   from '../helpers/reporters';
 
 export default class InputsPageObjects extends RootObject{
     constructor(){
@@ -15,15 +16,32 @@ export default class InputsPageObjects extends RootObject{
         return await $('input[type=number]');
     }
 
+
     async setValueInField(somevalue:number): Promise<void> {
-        AllureReporter.addStep("Setting input value in field")
-        const field = await this.numberField();
-        field.setValue(somevalue);
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking setting input value in field",
+        "Input value should be entered",
+        "1",
+        async () => {
+            const field = await this.numberField();
+            await field.setValue(somevalue);
+        }
+      )
+      };
 
     async checkIfFocused(): Promise<void> {
-        AllureReporter.addStep("Checking if field is focused after entering input value")
-        const field = await this.numberField();
-        expect(field.isFocused())
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking if field is focused after entering input value",
+        "Field should be focused",
+        "2",
+        async () => {
+            const field = await this.numberField();
+            expect(field.isFocused())
+        }
+      )
+      };
 }

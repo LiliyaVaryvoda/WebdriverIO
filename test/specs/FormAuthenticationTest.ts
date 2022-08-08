@@ -11,9 +11,11 @@ describe('Form Authentication test suit', function(){
 
     it('Login page test case #1', async function(){
         AllureReporter.startStep("Checking login page test")
+        await browser.pause(5000)
         await loginPageObjects.enterCorrectLogin(loginInfo.login, loginInfo.password)
+        await browser.pause(5000)
         await loginPageObjects.clickLogin()
-        await expect($(".subheader")).toHaveText('Welcome to the Secure Area. When you are done click logout below.')
+        await browser.pause(5000)
         await loginPageObjects.clickLogOut()
         AllureReporter.endStep("passed")
     })

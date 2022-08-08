@@ -1,5 +1,6 @@
 import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
+import {stepAllure}   from '../helpers/reporters';
 
 export default class JSAlertsPageObjects extends RootObject{
     constructor(){
@@ -23,40 +24,109 @@ export default class JSAlertsPageObjects extends RootObject{
         return await $(".//button[text()='Click for JS Prompt']");
     }
 
+    // async clickAlert(): Promise<void> {
+    //     AllureReporter.addStep("Clicking alert button")
+    //     const button = await this.alertButton();
+    //     await button.waitForDisplayed({ timeout: 3000 });
+    //     await button.click({skipRelease:true});
+    //     await browser.acceptAlert();
+    //     await expect ($("#result")).toHaveText('You successfully clicked an alert')
+    // }
+
     async clickAlert(): Promise<void> {
-        AllureReporter.addStep("Clicking alert button")
-        const button = await this.alertButton();
-        await button.waitForDisplayed({ timeout: 3000 });
-        await button.click({skipRelease:true});
-        await browser.acceptAlert();
-        await expect ($("#result")).toHaveText('You successfully clicked an alert')
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking clicking alert button",
+        "Alert should appear",
+        "1",
+        async () => {
+            const button = await this.alertButton();
+            await button.waitForDisplayed({ timeout: 3000 });
+            await button.click({skipRelease:true});
+            await browser.acceptAlert();
+            await expect ($("#result")).toHaveText('You successfully clicked an alert')
+        }
+      )
+      };
+
+    // async clickConfirm(): Promise<void> {
+    //     AllureReporter.addStep("Clicking confirm button to accept")
+    //     const button = await this.confirmButton();
+    //     await button.waitForDisplayed({ timeout: 3000 });
+    //     await button.click({skipRelease:true});
+    //     await browser.acceptAlert();
+    //     await expect ($("#result")).toHaveText('You clicked: Ok')
+    // }
 
     async clickConfirm(): Promise<void> {
-        AllureReporter.addStep("Clicking confirm button to accept")
-        const button = await this.confirmButton();
-        await button.waitForDisplayed({ timeout: 3000 });
-        await button.click({skipRelease:true});
-        await browser.acceptAlert();
-        await expect ($("#result")).toHaveText('You clicked: Ok')
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking clicking confirm button to accept alert",
+        "Confirm alert should appear",
+        "2",
+        async () => {
+            const button = await this.confirmButton();
+            await button.waitForDisplayed({ timeout: 3000 });
+            await button.click({skipRelease:true});
+            await browser.acceptAlert();
+            await expect ($("#result")).toHaveText('You clicked: Ok')
+        }
+      )
+      };
+
+    // async clickConfirm2(): Promise<void> {
+    //     AllureReporter.addStep("Clicking confirm button to dismiss")
+    //     const button = await this.confirmButton();
+    //     await button.waitForDisplayed({ timeout: 3000 });
+    //     await button.click({skipRelease:true});
+    //     await browser.dismissAlert();
+    //     await expect ($("#result")).toHaveText('You clicked: Cancel')
+    // }
 
     async clickConfirm2(): Promise<void> {
-        AllureReporter.addStep("Clicking confirm button to dismiss")
-        const button = await this.confirmButton();
-        await button.waitForDisplayed({ timeout: 3000 });
-        await button.click({skipRelease:true});
-        await browser.dismissAlert();
-        await expect ($("#result")).toHaveText('You clicked: Cancel')
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking clicking confirm button to dismiss alert",
+        "Confirm alert should appear",
+        "3",
+        async () => {
+            const button = await this.confirmButton();
+            await button.waitForDisplayed({ timeout: 3000 });
+            await button.click({skipRelease:true});
+            await browser.dismissAlert();
+            await expect ($("#result")).toHaveText('You clicked: Cancel')
+        }
+      )
+      };
+
+    // async clickPrompt(): Promise<void> {
+    //     AllureReporter.addStep("Clicking prompt button")
+    //     const button = await this.promptButton();
+    //     await button.waitForDisplayed({ timeout: 3000 });
+    //     button.click({skipRelease:true});
+    //     await browser.sendAlertText("text");
+    //     await browser.acceptAlert();
+    //     await expect ($("#result")).toHaveText('You entered: text')
+    // }
 
     async clickPrompt(): Promise<void> {
-        AllureReporter.addStep("Clicking prompt button")
-        const button = await this.promptButton();
-        await button.waitForDisplayed({ timeout: 3000 });
-        button.click({skipRelease:true});
-        await browser.sendAlertText("text");
-        await browser.acceptAlert();
-        await expect ($("#result")).toHaveText('You entered: text')
-    }
+        await stepAllure(
+        true,
+        true,
+        "Checking clicking prompt button",
+        "Prompt alert should appear",
+        "4",
+        async () => {
+            const button = await this.promptButton();
+            await button.waitForDisplayed({ timeout: 3000 });
+            await button.click({skipRelease:true});
+            await browser.sendAlertText("text");
+            await browser.acceptAlert();
+            await expect ($("#result")).toHaveText('You entered: text')
+        }
+      )
+      };
 }

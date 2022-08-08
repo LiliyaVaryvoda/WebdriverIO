@@ -1,5 +1,6 @@
 import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
+import {stepAllure}   from '../helpers/reporters';
 
 export default class FileUpload extends RootObject{
     constructor(){
@@ -19,16 +20,34 @@ export default class FileUpload extends RootObject{
         return await $('#file-submit')
     }
 
+
     async clickUploadButton(somepath:string): Promise<void> {
-        AllureReporter.addStep("Clicking upload button")
-        const button = await this.uploadButton();
-        button.setValue(somepath)
-    }
+        await stepAllure(
+        true,
+        true,
+        'Checking clicking upload button',
+        'Upload button should be clicked',
+        "1",
+        async () => {
+            const button = await this.uploadButton();
+            await button.setValue(somepath)
+        }
+      )
+      }
+
 
     async clickSubmitButton(): Promise<void> {
-        AllureReporter.addStep("Clicking sumbit button")
-        const button = await this.submitButton();
-        await button.click()
-    }
+        await stepAllure(
+        true,
+        true,
+        'Checking clicking submit button',
+        'Submit button should be clicked',
+        "2",
+        async () => {
+            const button = await this.submitButton();
+            await button.click()
+        }
+      )
+      }
 
 }

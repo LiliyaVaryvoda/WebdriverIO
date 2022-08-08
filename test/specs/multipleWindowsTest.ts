@@ -11,9 +11,11 @@ describe('Multiple windows test suit', function(){
 
     it('Multiple windows test case #1', async function(){
         AllureReporter.startStep("Checking multiple windows test")
+        await browser.pause(5000)
         await multipleWindows.clickLinkButton()
-        await browser.switchWindow('https://the-internet.herokuapp.com/windows')
-        await browser.switchWindow('New Window')
+        await browser.pause(5000)
+        await multipleWindows.switchingWindows()
+        await browser.pause(5000)
         AllureReporter.endStep("passed")
     })
 })

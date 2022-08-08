@@ -1,6 +1,7 @@
 import AllureReporter from "@wdio/allure-reporter";
 import RootObject from "./rootObject";
 import {expect} from 'chai'
+import {stepAllure}   from '../helpers/reporters';
 
 export default class NotificationMessages extends RootObject{
     constructor(){
@@ -17,25 +18,37 @@ export default class NotificationMessages extends RootObject{
     }
 
 
-    async clickLinkButton(): Promise<void> {
-        AllureReporter.addStep("Clicking link button")
-        AllureReporter.addDescription("This is description", 'text')
-        const button = await this.linkButton();
-        await button.waitForDisplayed({ timeout: 3000 });
-        button.click({skipRelease:true});
-        AllureReporter.addAttachment(' My Screenshot', await browser.takeScreenshot(),"png")
-        AllureReporter.addAttachment("My attachment", "","JSON")
-    }
 
-    async checkText(): Promise<void>{
-      AllureReporter.addStep("Checking notification text")
-      AllureReporter.addDescription("this is description", 'text')
-      const messageHeader = await $("#flash")
-      await messageHeader.waitForDisplayed({ timeout: 3000 });
-      const messageHeaderText = await messageHeader.getText()
-      const messages = ["Action successful\n×", "Action unsuccesful, please try again\n×"]
-      expect(messageHeaderText).to.be.oneOf(messages)
-      AllureReporter.addAttachment(' My Screenshot', await browser.takeScreenshot(),"png")
-      AllureReporter.addAttachment("my attachment", "","JSON")
-    }
+    async clickLinkButton(): Promise<void> {
+        await stepAllure(
+        true,
+        true,
+        "Checking clicking link button",
+        "The link button should be clicked",
+        "1",
+        async () => {
+            const button = await this.linkButton();
+            await button.waitForDisplayed({ timeout: 3000 });
+            button.click({skipRelease:true});
+        }
+      )
+      };
+
+
+    async checkText(): Promise<void> {
+        await stepAllure(
+        true,
+        true,
+        "Checking text results",
+        "Text should be displayed",
+        "2",
+        async () => {
+            const messageHeader = await $("#flash")
+            await messageHeader.waitForDisplayed({ timeout: 3000 });
+            const messageHeaderText = await messageHeader.getText()
+            const messages = ["Action successful\n×", "Action unsuccesful, please try again\n×"]
+            expect(messageHeaderText).to.be.oneOf(messages)
+        }
+      )
+      };
 }

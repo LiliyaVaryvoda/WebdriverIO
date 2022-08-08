@@ -12,7 +12,9 @@ describe('Notification Messages test suit', function(){
     it('Notification Messages test case #1', async function(){
         AllureReporter.startStep("Checking notification messages test")
         await notificationMessages.clickLinkButton()
+        await browser.pause(5000)
         await notificationMessages.checkText()
+        await browser.pause(5000)
         AllureReporter.endStep("passed")
     })
 })

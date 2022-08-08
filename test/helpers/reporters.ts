@@ -30,7 +30,7 @@ export default class Reporters {
       }
 
       catch (error) {
-        console.error(`Step ${stepNumber} failed.`,);
+        console.error(`Step ${stepNumber} failed.`);
         throw error;
       }
 }

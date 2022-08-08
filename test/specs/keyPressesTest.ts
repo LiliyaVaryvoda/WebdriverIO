@@ -12,6 +12,7 @@ describe('Key presses test suit', function(){
     it('Key presses test case #1', async function(){
         AllureReporter.startStep("Checking key presses test")
         await keysPresses.enterElement()
+        await browser.pause(5000)
         AllureReporter.endStep("passed")
     })
 })
