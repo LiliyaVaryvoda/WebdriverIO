@@ -279,15 +279,15 @@ export const config: Options.Testrunner = {
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
 
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        if (passed) {
-            await browser.takeScreenshot()
-          }
-        else if (error) {
-            let screen = await browser.takeScreenshot()
-            allureReporter.addAttachment("Myscreenshot",Buffer.from(screen, "base64"), "image/png")
-        }
-    },
+    // afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+    //     if (passed) {
+    //         await browser.takeScreenshot()
+    //       }
+    //     else if (error) {
+    //         let screen = await browser.takeScreenshot()
+    //         allureReporter.addAttachment("Myscreenshot",Buffer.from(screen, "base64"), "image/png")
+    //     }
+    // },
 
 
     /**

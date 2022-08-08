@@ -9,9 +9,11 @@ describe('Checkboxes test suit', function(){
       });
 
     it('Checkboxes test case #1', async function(){
-        AllureReporter.startStep("Checking checkboxes test")
+        //AllureReporter.startStep("Checking checkboxes test")
         await checkboxesPageObjects.clickOnCheckbox1();
+        await browser.pause(5000)
         await checkboxesPageObjects.clickOnCheckbox2();
-        AllureReporter.endStep("passed")
+        await browser.pause(5000)
+        //AllureReporter.endStep("passed")
     })
 })

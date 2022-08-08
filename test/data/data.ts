@@ -5,5 +5,5 @@ export const loginInfo = {
 
 export const forgotPasswordInfo = {
     email : "email@email.com",
-    textResult : 'Internal Server Error'
+    textResult : '111'
 }

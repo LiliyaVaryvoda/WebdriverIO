@@ -11,9 +11,13 @@ describe('Forgot Password test suit', function () {
     });
     it('Forgot password test case #1', async function () {
         AllureReporter.startStep("Checking forgot password test")
+        await browser.pause(5000)
         await forgotPassword.enterEmail(forgotPasswordInfo.email)
+        await browser.pause(5000)
         await forgotPassword.clickRetrieve()
-        await forgotPassword.resultMessage(forgotPasswordInfo.textResult)
+        await browser.pause(5000)
+        await forgotPassword.resultMessage()
+        await browser.pause(5000)
         AllureReporter.endStep("passed")
     });
 

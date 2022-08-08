@@ -11,9 +11,12 @@ describe('Context menu test suit', function(){
 
     it('Context menu test case #1', async function(){
         AllureReporter.startStep("Checking context menu test")
+        await browser.pause(5000)
         await contextMenuPageObjects.rightClickOnContextMenu()
+        await browser.pause(5000)
         const alertText = await browser.getAlertText();
         await browser.acceptAlert();
+        await browser.pause(5000)
         expect(alertText).to.equal('You selected a context menu')
         AllureReporter.endStep("passed")
     })
