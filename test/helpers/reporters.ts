@@ -1,97 +1,76 @@
-import allure from '@wdio/allure-reporter';
+import allure from "@wdio/allure-reporter";
+let fs = require("fs");
+
+export interface stepOptions {
+  takeScreenshot?: boolean;
+  proceedSteps?: boolean;
+}
+
 export default class Reporters {
   constructor() {}
-
-
+  private static sampleObject = { log: [] };
+  private static nameSelected = `./jsonfiles/file${Math.floor(
+    Math.random() * 1000
+  )}.json`;
   static async stepAllure(
-    createLog: boolean,
-    takeScreenshot: boolean,
+    options: stepOptions = { proceedSteps: false, takeScreenshot: false },
     description: string,
     expected: string,
-    stepNumber : string,
-    assertion: Function,
+    stepNumber: string,
+    assertion: Function
   ): Promise<void> {
-
-    if (takeScreenshot === true && createLog === false) {
+    if (options.proceedSteps === true) {
       try {
-        const allureTestTitle = `Step ${stepNumber} : ${description}`
-        await assertion();
+        const stepStart = `STEP ${stepNumber} STARTED!\n\n Description: ${description}\n Expected result: ${expected}\n`;
+        const allureTestTitle = `Step ${stepNumber} ${description}`;
 
-        allure.addStep(
-          allureTestTitle,
-          {
-            content: await browser.saveScreenshot(`./screenshots/step_${stepNumber}_test_name.png`),
-            type: 'image/png',
-            name: `Step ${stepNumber} screenshot`,
-          },
-          'passed'
+        if (options.takeScreenshot === true) {
+          await assertion();
+          allure.addStep(
+            allureTestTitle,
+            {
+              content: await browser.saveScreenshot(
+                `./screenshots/step_${stepNumber}_test_nameSelected.png`
+              ),
+              type: "image/png",
+              nameSelected: `Step ${stepNumber} screenshot`,
+            },
+            "passed"
           );
-
-      }
-
-      catch (error) {
-        console.error(`Step ${stepNumber} failed.`);
+          console.log(stepStart);
+          Reporters.sampleObject.log.push([
+            { stepNumber: `${stepNumber}` },
+            { description: `${description}` },
+            { expected: `${expected}` },
+          ]);
+        } else {
+          await assertion();
+          allure.addStep(allureTestTitle);
+          Reporters.sampleObject.log.push([
+            { stepNumber: `${stepNumber}` },
+            { description: `${description}` },
+            { expected: `${expected}` },
+          ]);
+          console.log(stepStart);
+        }
+      } catch (error) {
+        console.log(`Step ${stepNumber} failed.`);
         throw error;
-      }
-}
-
-
-    else if (takeScreenshot === false && createLog === true) {
-      try {
-        const stepStart = `STEP ${stepNumber} STARTED!\n\n Description: ${description}\n Expected result: ${expected}\n`;
-        const allureTestTitle = `Step ${stepNumber} ${description}`
-        await assertion();
-        
-        allure.addStep(allureTestTitle);
-        console.log(stepStart);
-      }
-      
-      
-      catch (error) {
-        console.error(`Step ${stepNumber} failed.`);
-        throw error;
-      }
-} 
-
-
-    else if (takeScreenshot === true && createLog === true) {
-      try {
-        const stepStart = `STEP ${stepNumber} STARTED!\n\n Description: ${description}\n Expected result: ${expected}\n`;
-        const allureTestTitle = `Step ${stepNumber} ${description}`
-        await assertion();
-
-        allure.addStep(allureTestTitle,
-          {
-            content: await browser.saveScreenshot(`./screenshots/step_${stepNumber}_test_name.png`),
-            type: 'image/png',
-            name: `Step ${stepNumber} screenshot`,
-          },
-          'passed'
+      } finally {
+        fs.writeFile(
+          Reporters.nameSelected,
+          JSON.stringify(Reporters.sampleObject),
+          (error) => console.error(error)
         );
-        
-        console.log(stepStart);
-    }
-    
-      catch (error) {
-        console.error(`Step ${stepNumber} failed.`,);
-        throw error;
       }
-}
-
-    else {
-      
+    } else {
       try {
         await assertion();
-      }
-      
-      catch (error) {
+      } catch (error) {
         throw error;
       }
-      console.log(`Step ${stepNumber} failed.`);
     }
-    
   }
 }
-
 
 export const stepAllure = Reporters.stepAllure;
