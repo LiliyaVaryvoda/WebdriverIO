@@ -8,5 +8,6 @@
             "expect-webdriverio"
         ],
         "target": "es2019",
+        "noImplicitAny": true
     }
 }

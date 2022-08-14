@@ -3,6 +3,7 @@ import RootObject from "./rootObject";
 import { expect } from "chai";
 import { stepAllure } from "../helpers/reporters";
 import { stepOptions } from "../helpers/reporters";
+import { LogFile } from "../helpers/reporters";
 
 export default class NotificationMessages extends RootObject {
   constructor() {

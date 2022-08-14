@@ -6,9 +6,17 @@ export interface stepOptions {
   proceedSteps?: boolean;
 }
 
+export interface LogFile {
+  log: {
+    stepNumber: string;
+    description: string;
+    expected: string;
+  }[];
+}
+
 export default class Reporters {
   constructor() {}
-  private static sampleObject = { log: [] };
+  private static sampleObject: LogFile = { log: [] };
   private static nameSelected = `./jsonfiles/file${Math.floor(
     Math.random() * 1000
   )}.json`;
@@ -25,33 +33,49 @@ export default class Reporters {
         const allureTestTitle = `Step ${stepNumber} ${description}`;
 
         if (options.takeScreenshot === true) {
-          await assertion();
-          allure.addStep(
-            allureTestTitle,
-            {
-              content: await browser.saveScreenshot(
-                `./screenshots/step_${stepNumber}_test_nameSelected.png`
-              ),
-              type: "image/png",
-              nameSelected: `Step ${stepNumber} screenshot`,
-            },
-            "passed"
-          );
-          console.log(stepStart);
-          Reporters.sampleObject.log.push([
-            { stepNumber: `${stepNumber}` },
-            { description: `${description}` },
-            { expected: `${expected}` },
-          ]);
+          try {
+            await assertion();
+            allure.addStep(
+              allureTestTitle,
+              {
+                content: await browser.saveScreenshot(
+                  `./screenshots/step_${stepNumber}_test_nameSelected.png`
+                ),
+                type: "image/png",
+                nameSelected: `Step ${stepNumber} screenshot`,
+              },
+              "passed"
+            );
+            console.log(stepStart);
+            Reporters.sampleObject.log.push({
+              stepNumber,
+              description,
+              expected,
+            });
+          } catch (error) {
+            await browser.saveScreenshot(
+              `./screenshots/step_${stepNumber}_test_FAILED.png`
+            );
+            console.log(`Step ${stepNumber} has FAILED`);
+            throw error;
+          }
         } else {
-          await assertion();
-          allure.addStep(allureTestTitle);
-          Reporters.sampleObject.log.push([
-            { stepNumber: `${stepNumber}` },
-            { description: `${description}` },
-            { expected: `${expected}` },
-          ]);
-          console.log(stepStart);
+          try {
+            await assertion();
+            allure.addStep(allureTestTitle);
+            Reporters.sampleObject.log.push({
+              stepNumber,
+              description,
+              expected,
+            });
+            console.log(stepStart);
+          } catch (error) {
+            await browser.saveScreenshot(
+              `./screenshots/step_${stepNumber}_test_FAILED.png`
+            );
+            console.log(`Step ${stepNumber} has FAILED`);
+            throw error;
+          }
         }
       } catch (error) {
         console.log(`Step ${stepNumber} failed.`);
@@ -60,13 +84,17 @@ export default class Reporters {
         fs.writeFile(
           Reporters.nameSelected,
           JSON.stringify(Reporters.sampleObject),
-          (error) => console.error(error)
+          (error: Error) => console.error(error)
         );
       }
     } else {
       try {
         await assertion();
       } catch (error) {
+        await browser.saveScreenshot(
+          `./screenshots/step_${stepNumber}_test_FAILED.png`
+        );
+        console.log(`Step ${stepNumber} has FAILED`);
         throw error;
       }
     }
