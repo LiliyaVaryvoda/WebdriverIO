@@ -1,0 +1,1 @@
+{"log":[{"stepNumber":"1","description":"Checking clicking link button","expected":"The link button should be clicked"},{"stepNumber":"2","description":"Checking text results","expected":"Text should be displayed"}]}

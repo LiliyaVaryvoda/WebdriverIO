@@ -180,6 +180,9 @@ export const config: Options.Testrunner = {
       "junit",
       {
         outputDir: "junit-results",
+        outputFileFormat: function () {
+          return `results-${new Date().getTime()}.xml`;
+        },
       },
     ],
   ],
