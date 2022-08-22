@@ -164,28 +164,34 @@ export const config: Options.Testrunner = {
 
   // my note : was before - reporters :'spec'
 
-  // reporters: [
-  //   "spec",
-  //   [
-  //     "allure",
-  //     {
-  //       outputDir: "allure-results",
-  //       disableWebdriverStepsReporting: true,
-  //       disableWebdriverScreenshotsReporting: false,
-  //       addConsoleLogs: true,
-  //     },
-  //   ],
-  // ],
-
   reporters: [
-    "dot",
+    "spec",
+    [
+      "allure",
+      {
+        outputDir: "allure-results",
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+        addConsoleLogs: true,
+      },
+    ],
+
     [
       "junit",
       {
-        outputDir: "./",
+        outputDir: "junit-results",
       },
     ],
   ],
+
+  // reporters: [
+  //   [
+  //     "junit",
+  //     {
+  //       outputDir: "./",
+  //     },
+  //   ],
+  // ],
 
   //
   // Options to be passed to Mocha.
