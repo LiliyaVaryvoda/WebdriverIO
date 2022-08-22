@@ -1,0 +1,1 @@
+{"log":[{"stepNumber":"1","description":"Clicking on first checkbox","expected":"The button should be clickable"},{"stepNumber":"2","description":"Clicking on second checkbox","expected":"The button should be clickable"}]}

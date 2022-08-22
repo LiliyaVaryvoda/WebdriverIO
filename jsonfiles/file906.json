@@ -1,0 +1,1 @@
+{"log":[{"stepNumber":"1","description":"Checking clicking link button","expected":"New window should be opened"},{"stepNumber":"2","description":"Checking windows switching","expected":"Windows should be switched"}]}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="DropDown Test suit" timestamp="2022-08-22T20:46:34" time="15.388" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="DropDown Test suit"/>
+      <property name="capabilities" value="chrome.104_0_5112_82.windows"/>
+      <property name="file" value=".\test\specs\dropDownTest.ts"/>
+    </properties>
+    <testcase classname="chrome.104_0_5112_82.windows.DropDown_Test_suit" name="Dropdown test case 1" time="15.364">
+      <system-out><![CDATA[
+RESULT: {"url":"https://the-internet.herokuapp.com/"}
+RESULT: {"url":"https://the-internet.herokuapp.com/dropdown"}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element - {"using":"css selector","value":"#dropdown"}
+RESULT: {"using":"css selector","value":"#dropdown"}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element/bed32c93-4b3a-4e16-8c2a-e2784f5794dc/element - {"using":"xpath","value":"./option[. = \"Option 1\"]|./option[normalize-space(text()) = \"Option 1\"]|./optgroup/option[. = \"Option 1\"]|./optgroup/option[normalize-space(text()) = \"Option 1\"]"}
+RESULT: {"using":"xpath","value":"./option[. = \"Option 1\"]|./option[normalize-space(text()) = \"Option 1\"]|./optgroup/option[. = \"Option 1\"]|./optgroup/option[normalize-space(text()) = \"Option 1\"]"}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element/6204cc54-2494-43a4-b09f-6108067b15b5/click - {}
+RESULT: {}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element - {"using":"css selector","value":"option[value=\"1\"]"}
+RESULT: {"using":"css selector","value":"option[value=\"1\"]"}
+COMMAND: GET /session/d71256909fed06fcbfcba56a61831127/element/6204cc54-2494-43a4-b09f-6108067b15b5/selected - {}
+RESULT: {}
+COMMAND: GET /session/d71256909fed06fcbfcba56a61831127/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element - {"using":"css selector","value":"#dropdown"}
+RESULT: {"using":"css selector","value":"#dropdown"}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element/bed32c93-4b3a-4e16-8c2a-e2784f5794dc/element - {"using":"xpath","value":"./option[. = \"Option 2\"]|./option[normalize-space(text()) = \"Option 2\"]|./optgroup/option[. = \"Option 2\"]|./optgroup/option[normalize-space(text()) = \"Option 2\"]"}
+RESULT: {"using":"xpath","value":"./option[. = \"Option 2\"]|./option[normalize-space(text()) = \"Option 2\"]|./optgroup/option[. = \"Option 2\"]|./optgroup/option[normalize-space(text()) = \"Option 2\"]"}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element/07624785-77e8-467c-ad30-9f7cd6070cc2/click - {}
+RESULT: {}
+COMMAND: POST /session/d71256909fed06fcbfcba56a61831127/element - {"using":"css selector","value":"option[value=\"2\"]"}
+RESULT: {"using":"css selector","value":"option[value=\"2\"]"}
+COMMAND: GET /session/d71256909fed06fcbfcba56a61831127/element/07624785-77e8-467c-ad30-9f7cd6070cc2/selected - {}
+RESULT: {}
+COMMAND: GET /session/d71256909fed06fcbfcba56a61831127/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/d71256909fed06fcbfcba56a61831127 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

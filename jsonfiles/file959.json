@@ -1,0 +1,1 @@
+{"log":[{"stepNumber":"1","description":"Checking setting input value in field","expected":"Input value should be entered"},{"stepNumber":"2","description":"Checking if field is focused after entering input value","expected":"Field should be focused"}]}
