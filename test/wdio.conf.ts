@@ -182,7 +182,7 @@ export const config: Options.Testrunner = {
     [
       "junit",
       {
-        outputDir: "junit-results",
+        outputDir: "./",
       },
     ],
   ],
