@@ -1,0 +1,1 @@
+{"log":[{"stepNumber":"1","description":"Checking entering correct login info","expected":"Login info should be entered"},{"stepNumber":"2","description":"Checking clicking login button","expected":"Login button should be clicked"},{"stepNumber":"3","description":"Checking clicking logout button","expected":"Logout button should be clicked"}]}

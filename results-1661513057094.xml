@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Multiple windows test suit" timestamp="2022-08-26T14:24:17" time="15.468" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Multiple windows test suit"/>
+      <property name="capabilities" value="chrome.104_0_5112_102.windows"/>
+      <property name="file" value=".\test\specs\multipleWindowsTest.ts"/>
+    </properties>
+    <testcase classname="chrome.104_0_5112_102.windows.Multiple_windows_test_suit" name="Multiple windows test case 1" time="15.454">
+      <system-out><![CDATA[
+RESULT: {"url":"https://the-internet.herokuapp.com/"}
+RESULT: {"url":"https://the-internet.herokuapp.com/windows"}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/element - {"using":"link text","value":"Click Here"}
+RESULT: {"using":"link text","value":"Click Here"}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"13b1443c-0367-4761-a84c-7d37d73fe473","ELEMENT":"13b1443c-0367-4761-a84c-7d37d73fe473"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"13b1443c-0367-4761-a84c-7d37d73fe473","ELEMENT":"13b1443c-0367-4761-a84c-7d37d73fe473"}]}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/actions - {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"75f2a2e4648576d553f7d388ebbe01f1","elementId":"13b1443c-0367-4761-a84c-7d37d73fe473","element-6066-11e4-a52e-4f735466cecf":"13b1443c-0367-4761-a84c-7d37d73fe473","selector":"=Click Here","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"chrome","browserVersion":"104.0.5112.102","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\LILIA_~1\\AppData\\Local\\Temp\\scoped_dir27128_853092953"},"goog:chromeOptions":{"debuggerAddress":"localhost:50633"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"_":"6 more keys: [\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\",\"webauthn:extension:credBlob\",\"webauthn:extension:largeBlob\",\"webauthn:virtualAuthenticators\"]"},"config":{"specs":["./test/specs/**/*.ts"],"suites":{},"exclude":[],"logLevel":"debug","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"75f2a2e4648576d553f7d388ebbe01f1","elementId":"13b1443c-0367-4761-a84c-7d37d73fe473","element-6066-11e4-a52e-4f735466cecf":"13b1443c-0367-4761-a84c-7d37d73fe473","selector":"=Click Here","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"chrome","browserVersion":"104.0.5112.102","chrome":{"chromedriverVersion":"103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853})","userDataDir":"C:\\Users\\LILIA_~1\\AppData\\Local\\Temp\\scoped_dir27128_853092953"},"goog:chromeOptions":{"debuggerAddress":"localhost:50633"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"_":"6 more keys: [\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\",\"webauthn:extension:credBlob\",\"webauthn:extension:largeBlob\",\"webauthn:virtualAuthenticators\"]"},"config":{"specs":["./test/specs/**/*.ts"],"suites":{},"exclude":[],"logLevel":"debug","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/element - {"using":"css selector","value":"h3"}
+RESULT: {"using":"css selector","value":"h3"}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/screenshot - {}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/elements - {"using":"css selector","value":"h3"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"h3"}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/window - {"handle":"CDwindow-37EB82CD9CA1EE1C65DCF98CAFEBD1E8"}
+RESULT: {"handle":"CDwindow-37EB82CD9CA1EE1C65DCF98CAFEBD1E8"}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/url - {}
+RESULT: {}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/window/handles - {}
+RESULT: {}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/window - {"handle":"CDwindow-37EB82CD9CA1EE1C65DCF98CAFEBD1E8"}
+RESULT: {"handle":"CDwindow-37EB82CD9CA1EE1C65DCF98CAFEBD1E8"}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/url - {}
+RESULT: {}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/title - {}
+RESULT: {}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/execute/sync - {"script":"return (() => window.name).apply(null, arguments)","args":[]}
+RESULT: {"script":"return (() => window.name).apply(null, arguments)","args":[]}
+COMMAND: POST /session/75f2a2e4648576d553f7d388ebbe01f1/window - {"handle":"CDwindow-87460CEA47F3F812988CA7CFBA0DB793"}
+RESULT: {"handle":"CDwindow-87460CEA47F3F812988CA7CFBA0DB793"}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/url - {}
+RESULT: {}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/title - {}
+RESULT: {}
+COMMAND: GET /session/75f2a2e4648576d553f7d388ebbe01f1/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/75f2a2e4648576d553f7d388ebbe01f1 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

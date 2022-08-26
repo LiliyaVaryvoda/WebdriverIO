@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Inputs test suit" timestamp="2022-08-26T14:23:16" time="15.379" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Inputs test suit"/>
+      <property name="capabilities" value="chrome.104_0_5112_102.windows"/>
+      <property name="file" value=".\test\specs\inputsTest.ts"/>
+    </properties>
+    <testcase classname="chrome.104_0_5112_102.windows.Inputs_test_suit" name="Inputs test case 1" time="15.366">
+      <system-out><![CDATA[
+RESULT: {"url":"https://the-internet.herokuapp.com/"}
+RESULT: {"url":"https://the-internet.herokuapp.com/inputs"}
+COMMAND: POST /session/12c585f199b918624a9ceb48b173008e/element - {"using":"css selector","value":"input[type=number]"}
+RESULT: {"using":"css selector","value":"input[type=number]"}
+COMMAND: POST /session/12c585f199b918624a9ceb48b173008e/element/1bd923ae-7ca7-4198-8a90-051e030716db/clear - {}
+RESULT: {}
+COMMAND: POST /session/12c585f199b918624a9ceb48b173008e/element/1bd923ae-7ca7-4198-8a90-051e030716db/value - {"text":"10"}
+RESULT: {"text":"10"}
+COMMAND: GET /session/12c585f199b918624a9ceb48b173008e/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/12c585f199b918624a9ceb48b173008e/element - {"using":"css selector","value":"input[type=number]"}
+RESULT: {"using":"css selector","value":"input[type=number]"}
+COMMAND: GET /session/12c585f199b918624a9ceb48b173008e/screenshot - {}
+COMMAND: POST /session/12c585f199b918624a9ceb48b173008e/execute/sync - {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1bd923ae-7ca7-4198-8a90-051e030716db","ELEMENT":"1bd923ae-7ca7-4198-8a90-051e030716db"}]}
+RESULT: {}
+RESULT: {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1bd923ae-7ca7-4198-8a90-051e030716db","ELEMENT":"1bd923ae-7ca7-4198-8a90-051e030716db"}]}
+COMMAND: DELETE /session/12c585f199b918624a9ceb48b173008e - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
