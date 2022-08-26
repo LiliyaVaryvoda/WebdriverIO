@@ -179,7 +179,7 @@ export const config: Options.Testrunner = {
     [
       "junit",
       {
-        outputDir: "junit-result",
+        outputDir: "./",
         outputFileFormat: function () {
           return `results-${new Date().getTime()}.xml`;
         },
