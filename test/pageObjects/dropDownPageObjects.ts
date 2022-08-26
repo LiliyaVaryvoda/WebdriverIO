@@ -24,6 +24,7 @@ export default class DropDownPageObjects extends RootObject {
       options,
       "Checking selecting first dropdown",
       "First dropdown should be selected",
+      "First dropdown is selected",
       "1",
       async () => {
         const element = await this.dropDownElement();
@@ -39,6 +40,7 @@ export default class DropDownPageObjects extends RootObject {
       options,
       "Checking selecting second dropdown",
       "Second dropdown should be selected",
+      "Second dropdown is selected",
       "2",
       async () => {
         const element = await this.dropDownElement();

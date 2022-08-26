@@ -12,11 +12,10 @@ describe("Checkboxes test suit", function () {
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
+
     await checkboxesPageObjects.clickOnCheckbox2({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

@@ -12,11 +12,9 @@ describe("Notification Messages test suit", function () {
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await notificationMessages.checkText({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

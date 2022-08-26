@@ -31,6 +31,7 @@ export default class MultipleWindows extends RootObject {
       options,
       "Checking clicking link button",
       "New window should be opened",
+      "New window has been opened",
       "1",
       async () => {
         const button = await this.linkButton();
@@ -46,6 +47,7 @@ export default class MultipleWindows extends RootObject {
       options,
       "Checking windows switching",
       "Windows should be switched",
+      "Window has been switched",
       "2",
       async () => {
         await browser.switchWindow(

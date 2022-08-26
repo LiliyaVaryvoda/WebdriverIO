@@ -8,16 +8,14 @@ describe("DropDown Test suit", function () {
   });
 
   it("Dropdown test case #1", async function () {
-    await browser.pause(5000);
     await dropDownPageObjects.selectDropDown1({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
+
     await dropDownPageObjects.selectDropDown2({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

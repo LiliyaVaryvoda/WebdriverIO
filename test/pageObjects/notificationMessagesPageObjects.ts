@@ -24,6 +24,7 @@ export default class NotificationMessages extends RootObject {
       options,
       "Checking clicking link button",
       "The link button should be clicked",
+      "The link button has been clicked",
       "1",
       async () => {
         const button = await this.linkButton();
@@ -38,6 +39,7 @@ export default class NotificationMessages extends RootObject {
       options,
       "Checking text results",
       "Text should be displayed",
+      "Text has been displayed",
       "2",
       async () => {
         const messageHeader = await $("#flash");

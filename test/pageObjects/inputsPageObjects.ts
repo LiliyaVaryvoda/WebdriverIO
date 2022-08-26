@@ -26,6 +26,7 @@ export default class InputsPageObjects extends RootObject {
       options,
       "Checking setting input value in field",
       "Input value should be entered",
+      "Input value is entered",
       "1",
       async () => {
         const field = await this.numberField();
@@ -39,6 +40,7 @@ export default class InputsPageObjects extends RootObject {
       options,
       "Checking if field is focused after entering input value",
       "Field should be focused",
+      "Field is focused",
       "2",
       async () => {
         const field = await this.numberField();

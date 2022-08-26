@@ -40,6 +40,7 @@ export default class JSAlertsPageObjects extends RootObject {
       options,
       "Checking clicking alert button",
       "Alert should appear",
+      "Alert has appeared",
       "1",
       async () => {
         const button = await this.alertButton();
@@ -67,6 +68,7 @@ export default class JSAlertsPageObjects extends RootObject {
       options,
       "Checking clicking confirm button to accept alert",
       "Confirm alert should appear",
+      "Confirm alert has appeared",
       "2",
       async () => {
         const button = await this.confirmButton();
@@ -92,6 +94,7 @@ export default class JSAlertsPageObjects extends RootObject {
       options,
       "Checking clicking confirm button to dismiss alert",
       "Confirm alert should appear",
+      "Confirm alert has appeared",
       "3",
       async () => {
         const button = await this.confirmButton();
@@ -118,6 +121,7 @@ export default class JSAlertsPageObjects extends RootObject {
       options,
       "Checking clicking prompt button",
       "Prompt alert should appear",
+      "Prompt alert has appeared",
       "4",
       async () => {
         const button = await this.promptButton();

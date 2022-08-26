@@ -30,6 +30,7 @@ export default class FileUpload extends RootObject {
       options,
       "Checking clicking upload button",
       "Upload button should be clicked",
+      "Upload button is clicked",
       "1",
       async () => {
         const button = await this.uploadButton();
@@ -43,6 +44,7 @@ export default class FileUpload extends RootObject {
       options,
       "Checking clicking submit button",
       "Submit button should be clicked",
+      "Submit button is clicked",
       "2",
       async () => {
         const button = await this.submitButton();

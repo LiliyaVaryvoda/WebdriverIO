@@ -9,21 +9,17 @@ describe("Forgot Password test suit", function () {
     forgotPassword.open();
   });
   it("Forgot password test case #1", async function () {
-    await browser.pause(5000);
     await forgotPassword.enterEmail(forgotPasswordInfo.email, {
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await forgotPassword.clickRetrieve({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await forgotPassword.resultMessage({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

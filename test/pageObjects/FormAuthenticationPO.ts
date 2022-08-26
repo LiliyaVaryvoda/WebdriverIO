@@ -40,6 +40,7 @@ export default class LoginPageObjects extends RootObject {
       options,
       "Checking entering correct login info",
       "Login info should be entered",
+      "Login info is enterted",
       "1",
       async () => {
         await this.usernameField.setValue(name);
@@ -53,6 +54,7 @@ export default class LoginPageObjects extends RootObject {
       options,
       "Checking clicking login button",
       "Login button should be clicked",
+      "Login button is clicked",
       "2",
       async () => {
         await this.loginBtn.click();
@@ -66,6 +68,7 @@ export default class LoginPageObjects extends RootObject {
       options,
       "Checking clicking logout button",
       "Logout button should be clicked",
+      "Log out button is clicked",
       "3",
       async () => {
         await this.logoutBtn.click();

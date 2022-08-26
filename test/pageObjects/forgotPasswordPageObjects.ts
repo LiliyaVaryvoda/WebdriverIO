@@ -24,6 +24,7 @@ export default class ForgotPassword extends RootObject {
       options,
       "Checking email entering in the email field",
       "Email should be entered in the email field",
+      "Email is entered",
       "1",
       async () => {
         const field = await this.emailField();
@@ -37,6 +38,7 @@ export default class ForgotPassword extends RootObject {
       options,
       "Checking clicking Retrieve button",
       "The button should be clicked",
+      "Button is clicked",
       "2",
       async () => {
         const button = await this.retrieveButton();
@@ -50,6 +52,7 @@ export default class ForgotPassword extends RootObject {
       options,
       "Checking result message",
       "The result message should be displayed",
+      "Result message is displayed",
       "3",
       async () => {
         const message = await $("h1");

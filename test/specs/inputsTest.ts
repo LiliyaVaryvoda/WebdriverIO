@@ -9,16 +9,13 @@ describe("Inputs test suit", function () {
   });
 
   it("Inputs test case #1", async function () {
-    await browser.pause(5000);
     await inputsPageObjects.setValueInField(10, {
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await inputsPageObjects.checkIfFocused({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

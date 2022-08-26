@@ -26,6 +26,7 @@ export default class CheckboxesPageObjects extends RootObject {
       options,
       "Clicking on first checkbox",
       "The button should be clickable",
+      "Button is clicked",
       "1",
       async () => {
         const button = await this.getCheckbox1();
@@ -44,6 +45,7 @@ export default class CheckboxesPageObjects extends RootObject {
       options,
       "Clicking on second checkbox",
       "The button should be clickable",
+      "Button is clicked",
       "2",
       async () => {
         const button = await this.getCheckbox2();

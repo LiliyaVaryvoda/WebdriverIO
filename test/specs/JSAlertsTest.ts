@@ -36,11 +36,9 @@ describe("JS alerts test suit", function () {
   });
 
   it("JS prompt test case #4", async function () {
-    await browser.pause(5000);
     await jSAlertsPageObjects.clickPrompt({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

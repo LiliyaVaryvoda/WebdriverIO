@@ -1,1 +1,0 @@
-{"log":[{"stepNumber":"1","description":"Checking email entering in the email field","expected":"Email should be entered in the email field"},{"stepNumber":"2","description":"Checking clicking Retrieve button","expected":"The button should be clicked"},{"stepNumber":"3","description":"Checking result message","expected":"The result message should be displayed"}]}

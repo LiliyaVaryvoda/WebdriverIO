@@ -11,6 +11,8 @@ export interface LogFile {
     stepNumber: string;
     description: string;
     expected: string;
+    actual: string;
+    status: string;
   }[];
 }
 
@@ -20,10 +22,12 @@ export default class Reporters {
   private static nameSelected = `./jsonfiles/file${Math.floor(
     Math.random() * 1000
   )}.json`;
+
   static async stepAllure(
     options: stepOptions = { proceedSteps: false, takeScreenshot: false },
     description: string,
     expected: string,
+    actual: string,
     stepNumber: string,
     assertion: Function
   ): Promise<void> {
@@ -39,7 +43,9 @@ export default class Reporters {
               allureTestTitle,
               {
                 content: await browser.saveScreenshot(
-                  `./screenshots/step_${stepNumber}_test_nameSelected.png`
+                  `./screenshots/step_${stepNumber}_test_${Math.floor(
+                    Math.random() * 100
+                  )}.png`
                 ),
                 type: "image/png",
                 nameSelected: `Step ${stepNumber} screenshot`,
@@ -51,6 +57,8 @@ export default class Reporters {
               stepNumber,
               description,
               expected,
+              actual,
+              status: "passed",
             });
           } catch (error) {
             await browser.saveScreenshot(
@@ -67,6 +75,8 @@ export default class Reporters {
               stepNumber,
               description,
               expected,
+              actual,
+              status: "passed",
             });
             console.log(stepStart);
           } catch (error) {

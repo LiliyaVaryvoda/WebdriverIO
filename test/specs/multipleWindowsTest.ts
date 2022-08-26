@@ -9,16 +9,13 @@ describe("Multiple windows test suit", function () {
   });
 
   it("Multiple windows test case #1", async function () {
-    await browser.pause(5000);
     await multipleWindows.clickLinkButton({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await multipleWindows.switchingWindows({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
   });
 });

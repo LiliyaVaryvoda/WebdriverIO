@@ -9,7 +9,6 @@ describe("Form Authentication test suit", function () {
   });
 
   it("Login page test case #1", async function () {
-    await browser.pause(5000);
     await loginPageObjects.enterCorrectLogin(
       loginInfo.login,
       loginInfo.password,
@@ -18,12 +17,10 @@ describe("Form Authentication test suit", function () {
         takeScreenshot: true,
       }
     );
-    await browser.pause(5000);
     await loginPageObjects.clickLogin({
       proceedSteps: true,
       takeScreenshot: true,
     });
-    await browser.pause(5000);
     await loginPageObjects.clickLogOut({
       proceedSteps: true,
       takeScreenshot: true,

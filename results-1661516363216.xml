@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="File upload test suit" timestamp="2022-08-26T15:19:24" time="20.77" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="File upload test suit"/>
+      <property name="capabilities" value="chrome.104_0_5112_102.windows"/>
+      <property name="file" value=".\test\specs\fileUploadTest.ts"/>
+    </properties>
+    <testcase classname="chrome.104_0_5112_102.windows.File_upload_test_suit" name="File upload test case 1" time="20.753">
+      <system-out><![CDATA[
+RESULT: {"url":"https://the-internet.herokuapp.com/"}
+RESULT: {"url":"https://the-internet.herokuapp.com/upload"}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/file - {"file":"[base64] 63192 bytes"}
+RESULT: {"file":"[base64] 63192 bytes"}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/element - {"using":"css selector","value":"#file-upload"}
+RESULT: {"using":"css selector","value":"#file-upload"}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/element/08464346-f223-4881-ba47-a5944ba49544/clear - {}
+RESULT: {}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/element/08464346-f223-4881-ba47-a5944ba49544/value - {"text":"C:\\Users\\LILIA_~1\\AppData\\Local\\Temp\\scoped_dir33148_379051156\\upload33148_1229045484\\epam.png"}
+RESULT: {"text":"C:\\Users\\LILIA_~1\\AppData\\Local\\Temp\\scoped_dir33148_379051156\\upload33148_1229045484\\epam.png"}
+COMMAND: GET /session/8b34e99c465c4c9569607d630ea02ca7/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/element - {"using":"css selector","value":"#file-submit"}
+RESULT: {"using":"css selector","value":"#file-submit"}
+COMMAND: POST /session/8b34e99c465c4c9569607d630ea02ca7/element/72da35b0-7005-46ae-b406-8d77eab28124/click - {}
+RESULT: {}
+COMMAND: GET /session/8b34e99c465c4c9569607d630ea02ca7/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/8b34e99c465c4c9569607d630ea02ca7 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
