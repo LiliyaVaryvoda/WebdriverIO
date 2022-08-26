@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Forgot Password test suit" timestamp="2022-08-26T14:34:55" time="20.938" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Forgot Password test suit"/>
+      <property name="capabilities" value="chrome.104_0_5112_102.windows"/>
+      <property name="file" value=".\test\specs\forgotPasswordTest.ts"/>
+    </properties>
+    <testcase classname="chrome.104_0_5112_102.windows.Forgot_Password_test_suit" name="Forgot password test case 1" time="20.923">
+      <system-out><![CDATA[
+RESULT: {"url":"https://the-internet.herokuapp.com/"}
+RESULT: {"url":"https://the-internet.herokuapp.com/forgot_password"}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element - {"using":"css selector","value":"#email"}
+RESULT: {"using":"css selector","value":"#email"}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element/b8b225a8-311c-48f0-8056-839fb3e212ed/clear - {}
+RESULT: {}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element/b8b225a8-311c-48f0-8056-839fb3e212ed/value - {"text":"email@email.com"}
+RESULT: {"text":"email@email.com"}
+COMMAND: GET /session/9120635db8bedd7eb7403dbb30646f59/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element - {"using":"css selector","value":"#form_submit"}
+RESULT: {"using":"css selector","value":"#form_submit"}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element/33f089af-1d7c-486c-a3a7-fb72d17b3e92/click - {}
+RESULT: {}
+COMMAND: GET /session/9120635db8bedd7eb7403dbb30646f59/screenshot - {}
+RESULT: {}
+COMMAND: POST /session/9120635db8bedd7eb7403dbb30646f59/element - {"using":"css selector","value":"h1"}
+RESULT: {"using":"css selector","value":"h1"}
+COMMAND: GET /session/9120635db8bedd7eb7403dbb30646f59/screenshot - {}
+COMMAND: GET /session/9120635db8bedd7eb7403dbb30646f59/element/a6d80de4-780f-4b30-b088-6c671f927ea7/text - {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/9120635db8bedd7eb7403dbb30646f59 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
